@@ -59,3 +59,33 @@ console.log(`Hola mi nombre es ${nombre} y mi apellido es ${apellido}`);
 
 const arreglo = [1,2,3,4,5];
 console.log(arreglo);
+
+
+
+
+
+
+
+let subtitle = document.querySelector('#subtitle'); 
+let parrafo = document.querySelector('#parrafo');
+
+console.log(subtitle);
+
+console.log(subtitle.textContent);
+subtitle.textContent = 'Nuevo valor';
+
+subtitle.classList.add('red');
+subtitle.classList.remove('red');
+
+
+const animales = ['Perro', 'Gato', 'Mapache', 'Pez', 'Leopardo', 'Raton', 'Zorro'];
+const list = document.querySelector('#list');
+
+animales.push('Elefante');
+
+
+animales.forEach((animal, index) => {
+  let item = document.createElement('li');
+  item.textContent = `${index + 1} ${animal}`;
+  list.appendChild(item);
+} );
