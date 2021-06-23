@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Convertidor</title>
+</head>
+<body>
+  <input type="text" id="celcius">
+
+  <span>El valor en kelvin es: <strong id="kelvin"></strong></span>
+  <span>El valor en fahrenheit es: <strong id="fahrenheit"></strong> </span>
+  <button id="convertir">Convertir</button>
+  <script>
+    
+    document.getElementById("convertir").addEventListener("click", function(){
+      var celcius = parseFloat(document.getElementById("celcius").value);
+      document.getElementById("kelvin").textContent = celcius + 273.15;
+      document.getElementById("fahrenheit").textContent = celcius * 1.8000 + 32.00
+    });
+
+  </script>
+</body>
+</html>
